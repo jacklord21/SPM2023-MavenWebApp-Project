@@ -49,7 +49,8 @@ class SeleniumNewTest {
 	 */
 	@AfterEach
 	void tearDown() throws Exception {
-		driver.close();
+	//	driver.close();
+		driver.quit();
 	}
 
 	@Test
