@@ -2,12 +2,7 @@ package unicam.spm2023.selenium;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -121,6 +116,7 @@ class SeleniumNewTest {
 
 
 	@Test
+	@Tag("AcceptanceTest")
 	void shouldBeExpectedPage() throws InterruptedException {
 
 		//System.out.println(projectPath);
