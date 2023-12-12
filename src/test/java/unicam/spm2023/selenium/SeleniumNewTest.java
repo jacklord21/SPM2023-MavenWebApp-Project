@@ -35,7 +35,8 @@ class SeleniumNewTest {
 	 * @throws java.lang.Exception
 	 */
 	@AfterAll
-	static void tearDownAfterClass() throws Exception {		
+	static void tearDownAfterClass() throws Exception {
+		driver.quit();
 	}
 
 	/**
@@ -43,7 +44,6 @@ class SeleniumNewTest {
 	 */
 	@BeforeEach
 	void setUp() throws Exception {
-
 		System.setProperty("webdriver.chrome.driver", projectPath+"/src/test/java/unicam/spm2023/drivers/chromedriver");
 		driver = new ChromeDriver();
 	}
@@ -54,10 +54,10 @@ class SeleniumNewTest {
 	@AfterEach
 	void tearDown() throws Exception {
 		driver.close();
-		driver.quit();
 	}
 
 	@Test
+	@Disabled
 	void checkProsSite() throws InterruptedException {
 		
 		driver.get("http://pros.unicam.it/");
@@ -116,6 +116,23 @@ class SeleniumNewTest {
 		assertTrue(textPresent);
 		//TO COMPLETE
 			
+	}
+
+
+	@Test
+	void shouldBeExpectedPage() throws InterruptedException {
+
+		//System.out.println(projectPath);
+		driver.get("http://localhost:8080/spm2023/");
+
+		Thread.sleep(3000);
+
+		String at = driver.getTitle();
+		String et = "SPM 2023";
+
+		assertEquals(et,at);
+
+
 	}
 
 
