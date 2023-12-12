@@ -16,6 +16,7 @@ import org.openqa.selenium.Keys;
 
 import java.util.List;
 import java.util.ArrayList;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 class SeleniumNewTest {
 
@@ -27,7 +28,7 @@ class SeleniumNewTest {
 	 */
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		 projectPath = System.getProperty("user.dir");
+		WebDriverManager.chromedriver().setup();
 	}
 	
 	
@@ -44,7 +45,7 @@ class SeleniumNewTest {
 	 */
 	@BeforeEach
 	void setUp() throws Exception {
-		System.setProperty("webdriver.chrome.driver", projectPath+"/src/test/java/unicam/spm2023/drivers/chromedriver");
+	//	System.setProperty("webdriver.chrome.driver", projectPath+"/src/test/java/unicam/spm2023/drivers/chromedriver");
 		driver = new ChromeDriver();
 	}
 
