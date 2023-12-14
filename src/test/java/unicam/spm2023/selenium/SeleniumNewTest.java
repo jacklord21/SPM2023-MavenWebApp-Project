@@ -26,6 +26,7 @@ class SeleniumNewTest {
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 		WebDriverManager.chromedriver().setup();
+		options.addArguments("--remote-allow-origins=*");
 		options.addArguments("--headless");
 	}
 	
