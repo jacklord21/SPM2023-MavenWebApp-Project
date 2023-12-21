@@ -29,6 +29,7 @@ class SeleniumNewTest {
 		options.addArguments("--remote-allow-origins=*");
 		options.addArguments("--headless");
 	}
+			
 	
 	
 	/**
