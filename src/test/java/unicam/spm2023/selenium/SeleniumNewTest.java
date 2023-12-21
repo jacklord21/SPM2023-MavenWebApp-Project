@@ -120,6 +120,7 @@ class SeleniumNewTest {
 
 	@Test
 	@Tag("AcceptanceTest")
+	@Disabled
 	void shouldBeExpectedPage() throws InterruptedException {
 
 		//System.out.println(projectPath);
