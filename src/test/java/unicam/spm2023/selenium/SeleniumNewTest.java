@@ -26,7 +26,6 @@ class SeleniumNewTest {
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 		WebDriverManager.chromedriver().setup();
-		options.addArguments("--remote-allow-origins=*");
 		options.addArguments("--headless");
 	}
 			
@@ -58,7 +57,6 @@ class SeleniumNewTest {
 	}
 
 	@Test
-	@Disabled
 	void checkProsSite() throws InterruptedException {
 		
 		driver.get("http://pros.unicam.it/");
@@ -125,7 +123,7 @@ class SeleniumNewTest {
 	void shouldBeExpectedPage() throws InterruptedException {
 
 		//System.out.println(projectPath);
-		driver.get("http://localhost:8080/spm2023/");
+		driver.get("http://127.0.0.1:8080/spm2023/");
 
 		Thread.sleep(3000);
 
