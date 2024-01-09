@@ -3,6 +3,5 @@
 .classpath
 .project
 .settings/
-target/
 src/test/java/unicam/spm2023/drivers
 *.txt
